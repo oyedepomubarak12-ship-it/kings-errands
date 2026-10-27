@@ -1,0 +1,80 @@
+
+/* Shared responsive helpers for the website */
+
+.home-page,
+.services-page,
+.about-page,
+.contact-page,
+.tracking-page,
+.track-delivery-page {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.home-page *,
+.services-page *,
+.about-page *,
+.contact-page *,
+.tracking-page *,
+.track-delivery-page * {
+  min-width: 0;
+}
+
+.home-page img,
+.services-page img,
+.about-page img,
+.contact-page img,
+.tracking-page img,
+.track-delivery-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .home-page section,
+  .services-page section,
+  .about-page section,
+  .contact-page section,
+  .tracking-page section,
+  .track-delivery-page section {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .home-page h1,
+  .services-page h1,
+  .about-page h1,
+  .contact-page h1,
+  .tracking-page h1,
+  .track-delivery-page h1 {
+    overflow-wrap: anywhere;
+  }
+
+  .home-page button,
+  .services-page button,
+  .about-page button,
+  .contact-page button,
+  .tracking-page button,
+  .track-delivery-page button,
+  .home-page a,
+  .services-page a,
+  .about-page a,
+  .contact-page a,
+  .tracking-page a,
+  .track-delivery-page a {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page,
+  .services-page,
+  .about-page,
+  .contact-page,
+  .tracking-page,
+  .track-delivery-page {
+    overflow-wrap: break-word;
+  }
+}

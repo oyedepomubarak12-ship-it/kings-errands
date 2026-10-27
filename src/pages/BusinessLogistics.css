@@ -1,0 +1,502 @@
+
+.business-logistics-page {
+  overflow: hidden;
+  color: #172b4d;
+  background: #fff;
+}
+
+.business-logistics-container {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.business-logistics-hero {
+  position: relative;
+  padding: 78px 0;
+  overflow: hidden;
+  background: #10284b;
+  color: #fff;
+}
+
+.business-logistics-hero::before {
+  position: absolute;
+  top: -280px;
+  right: -160px;
+  width: 650px;
+  height: 650px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.business-logistics-hero-grid {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 65px;
+}
+
+.business-logistics-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #e7bd68;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.business-logistics-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.business-logistics-hero-copy h1 span {
+  color: #e7bd68;
+}
+
+.business-logistics-hero-copy > p {
+  max-width: 560px;
+  margin: 23px 0 0;
+  color: #d4deeb;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.business-logistics-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.business-logistics-button {
+  display: inline-flex;
+  min-height: 49px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.business-logistics-button:hover {
+  transform: translateY(-2px);
+}
+
+.business-logistics-button-gold {
+  border-color: #e7bd68;
+  background: #e7bd68;
+  color: #10284b;
+}
+
+.business-logistics-button-gold:hover {
+  border-color: #f3d89d;
+  background: #f3d89d;
+}
+
+.business-logistics-button-outline {
+  border-color: rgb(255 255 255 / 35%);
+  background: transparent;
+  color: #fff;
+}
+
+.business-logistics-button-outline:hover {
+  border-color: #fff;
+  background: rgb(255 255 255 / 8%);
+}
+
+.business-logistics-button-navy {
+  background: #10284b;
+  color: #fff;
+}
+
+.business-logistics-button-navy:hover {
+  background: #1b3b68;
+}
+
+.business-logistics-hero-art {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 390px;
+  place-items: center;
+}
+
+.business-logistics-art-circle {
+  position: absolute;
+  width: min(100%, 380px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(231 189 104 / 28%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 3%);
+}
+
+.business-logistics-art-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 360px);
+  padding: 25px;
+  border: 1px solid #e5eaf1;
+  border-radius: 17px;
+  background: #fff;
+  color: #10284b;
+  box-shadow: 0 25px 60px rgb(0 0 0 / 18%);
+}
+
+.business-logistics-art-icon {
+  display: grid;
+  width: 53px;
+  height: 53px;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf2f8;
+  color: #10284b;
+}
+
+.business-logistics-art-label {
+  display: block;
+  margin-top: 16px;
+  color: #7b8798;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.business-logistics-art-illustration {
+  display: grid;
+  min-height: 155px;
+  place-items: center;
+  margin-top: 15px;
+  border-radius: 12px;
+  background: #f2f6fc;
+  color: #c49436;
+}
+
+.business-logistics-art-illustration svg {
+  max-width: 100%;
+}
+
+.business-logistics-art-bottom {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.business-logistics-art-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #526176;
+  font-size: 12px;
+}
+
+.business-logistics-art-bottom svg {
+  flex-shrink: 0;
+  color: #a57924;
+}
+
+.business-logistics-solutions {
+  padding: 82px 0;
+  background: #f7f9fc;
+}
+
+.business-logistics-section-heading {
+  max-width: 730px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.business-logistics-eyebrow-light {
+  margin-bottom: 12px;
+  color: #a57924;
+}
+
+.business-logistics-section-heading h2,
+.business-logistics-process-copy h2 {
+  margin: 0;
+  color: #10284b;
+  font-size: clamp(28px, 3.5vw, 40px);
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+}
+
+.business-logistics-section-heading > p,
+.business-logistics-process-copy > p {
+  margin: 16px 0 0;
+  color: #69788c;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.business-logistics-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.business-logistics-solution-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 22px;
+  border: 1px solid #e3e9f1;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-logistics-solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgb(16 40 75 / 7%);
+}
+
+.business-logistics-solution-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf2f8;
+  color: #10284b;
+}
+
+.business-logistics-solution-card h3 {
+  margin: 20px 0 10px;
+  color: #10284b;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.business-logistics-solution-card p {
+  margin: 0;
+  color: #69788c;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.business-logistics-process {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.business-logistics-process-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 75px;
+}
+
+.business-logistics-process-copy > p {
+  margin-bottom: 25px;
+}
+
+.business-logistics-steps {
+  display: grid;
+  gap: 26px;
+}
+
+.business-logistics-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 19px;
+}
+
+.business-logistics-step-number {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e7bd68;
+  border-radius: 12px;
+  background: #fbf6ea;
+  color: #8b641a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.business-logistics-step h3 {
+  margin: 2px 0 8px;
+  color: #10284b;
+  font-size: 16px;
+}
+
+.business-logistics-step p {
+  margin: 0;
+  color: #69788c;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.business-logistics-cta {
+  padding: 55px 0;
+  background: #10284b;
+  color: #fff;
+}
+
+.business-logistics-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.business-logistics-cta-inner > div {
+  max-width: 700px;
+}
+
+.business-logistics-cta-inner h2 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 36px);
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+.business-logistics-cta-inner p {
+  margin: 13px 0 0;
+  color: #d4deeb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1050px) {
+  .business-logistics-hero-grid {
+    gap: 30px;
+  }
+
+  .business-logistics-solution-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .business-logistics-process-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  .business-logistics-container {
+    width: calc(100% - 36px);
+  }
+
+  .business-logistics-hero {
+    padding: 58px 0;
+  }
+
+  .business-logistics-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .business-logistics-hero-copy h1 {
+    font-size: clamp(36px, 8vw, 49px);
+    letter-spacing: -1px;
+  }
+
+  .business-logistics-hero-copy > p {
+    font-size: 14px;
+  }
+
+  .business-logistics-hero-art {
+    min-height: 350px;
+  }
+
+  .business-logistics-solutions,
+  .business-logistics-process {
+    padding: 62px 0;
+  }
+
+  .business-logistics-process-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .business-logistics-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-logistics-container {
+    width: calc(100% - 30px);
+  }
+
+  .business-logistics-hero {
+    padding: 45px 0;
+  }
+
+  .business-logistics-hero-copy h1 {
+    font-size: 35px;
+  }
+
+  .business-logistics-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .business-logistics-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .business-logistics-hero-art {
+    min-height: 325px;
+  }
+
+  .business-logistics-art-card {
+    padding: 19px;
+  }
+
+  .business-logistics-art-illustration {
+    min-height: 130px;
+  }
+
+  .business-logistics-solutions {
+    padding: 52px 0;
+  }
+
+  .business-logistics-section-heading h2,
+  .business-logistics-process-copy h2 {
+    font-size: 29px;
+  }
+
+  .business-logistics-solution-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .business-logistics-solution-card {
+    padding: 22px;
+  }
+
+  .business-logistics-cta-inner h2 {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .business-logistics-page *,
+  .business-logistics-page *::before,
+  .business-logistics-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

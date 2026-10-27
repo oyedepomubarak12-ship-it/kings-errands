@@ -1,0 +1,149 @@
+
+/* Extra styling for tracking results */
+
+.tracking-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid #dce9df;
+  border-radius: 999px;
+  background: #edf6ef;
+  color: #176b45;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tracking-status-badge > span {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.tracking-status-processing {
+  color: #8a6116;
+  border-color: #f0dfb9;
+  background: #fff7e6;
+}
+
+.tracking-status-transit {
+  color: #176b45;
+  border-color: #dce9df;
+  background: #edf6ef;
+}
+
+.tracking-status-delivered {
+  color: #176b45;
+  border-color: #b9dec6;
+  background: #e2f5e8;
+}
+
+.tracking-demo-warning {
+  max-width: 600px;
+  margin: 16px auto 0;
+  color: #dce8df;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.tracking-progress-track {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8ede8;
+}
+
+.tracking-progress-fill {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: #176b45;
+  transition: width 0.35s ease;
+}
+
+.tracking-location-card,
+.tracking-info-card {
+  min-width: 0;
+}
+
+.tracking-info-card strong {
+  overflow-wrap: anywhere;
+}
+
+.tracking-empty-state > p {
+  line-height: 1.8;
+}
+
+.tracking-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.tracking-error p {
+  overflow-wrap: anywhere;
+}
+
+.tracking-result-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tracking-result-footer p {
+  flex: 1;
+  min-width: 200px;
+  line-height: 1.7;
+}
+
+.tracking-result-footer button,
+.tracking-example-buttons button {
+  cursor: pointer;
+}
+
+.tracking-example-buttons button:focus-visible,
+.tracking-result-footer button:focus-visible {
+  outline: 3px solid #c99b4c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .tracking-result-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tracking-progress-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tracking-result-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tracking-result-footer p {
+    min-width: 0;
+  }
+
+  .tracking-result-footer button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracking-progress-fill {
+    transition: none;
+  }
+}

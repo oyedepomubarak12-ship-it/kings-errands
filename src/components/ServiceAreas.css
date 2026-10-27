@@ -1,0 +1,232 @@
+
+.service-areas-section {
+  padding: 100px 24px;
+  background: #f6f8fb;
+}
+
+.service-areas-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.service-areas-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 38px;
+}
+
+.service-areas-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 17px;
+  color: #b68a36;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.service-areas-heading h2 {
+  max-width: 650px;
+  margin: 0 0 14px;
+  color: #10243e;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+  letter-spacing: -1.4px;
+  line-height: 1.15;
+}
+
+.service-areas-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: #69778a;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.service-areas-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 17px;
+  border: 1px solid #d9e0e9;
+  border-radius: 8px;
+  color: #10243e;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.service-areas-link:hover {
+  border-color: #10243e;
+  background: #10243e;
+  color: #fff;
+}
+
+.service-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-area-card {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 27px;
+  border: 1px solid #e5eaf1;
+  border-radius: 13px;
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-area-card:hover {
+  transform: translateY(-5px);
+  border-color: #d2b574;
+  box-shadow: 0 16px 35px rgb(16 36 62 / 7%);
+}
+
+.service-area-card-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.service-area-icon {
+  display: grid;
+  width: 49px;
+  height: 49px;
+  place-items: center;
+  border-radius: 11px;
+  background: #edf2f8;
+  color: #173c67;
+}
+
+.service-area-label {
+  padding: 6px 9px;
+  border-radius: 5px;
+  background: #fbf5e8;
+  color: #997128;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.service-area-card h3 {
+  margin: 0 0 10px;
+  color: #10243e;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.service-area-card > p {
+  margin: 0 0 24px;
+  color: #69778a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.service-area-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: #173c67;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.service-area-action:hover {
+  color: #b68a36;
+}
+
+.service-areas-note {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 27px;
+  padding: 22px 25px;
+  border: 1px solid #e3e9f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.service-areas-note-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #fbf5e8;
+  color: #a77d2e;
+}
+
+.service-areas-note p {
+  margin: 0;
+  color: #69778a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.service-areas-note strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #10243e;
+}
+
+@media (max-width: 850px) {
+  .service-areas-section {
+    padding: 75px 22px;
+  }
+
+  .service-areas-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-areas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .service-areas-section {
+    padding: 60px 18px;
+  }
+
+  .service-areas-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-area-card {
+    min-height: 235px;
+    padding: 23px;
+  }
+
+  .service-areas-note {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .service-areas-heading h2 {
+    letter-spacing: -0.8px;
+  }
+}

@@ -1,0 +1,61 @@
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 900;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 12px;
+  background: #10284b;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgb(16 40 75 / 22%);
+  cursor: pointer;
+  animation: back-to-top-appear 0.2s ease-out;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: #e7bd68;
+  color: #10284b;
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #e7bd68;
+  outline-offset: 3px;
+}
+
+@keyframes back-to-top-appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    right: 15px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    animation: none;
+    transition: none;
+  }
+}
