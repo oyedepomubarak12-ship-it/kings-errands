@@ -2,14 +2,15 @@
 .delivery-plans-page {
   --plans-navy: #102744;
   --plans-blue: #1d4778;
-  --plans-gold: #d9a441;
-  --plans-muted: #65748a;
-  --plans-border: #e4eaf1;
+  --plans-muted: #64748b;
+  --plans-border: #e1e8f0;
   color: var(--plans-navy);
   background: #fff;
 }
 
-.delivery-plans-page * {
+.delivery-plans-page *,
+.delivery-plans-page *::before,
+.delivery-plans-page *::after {
   box-sizing: border-box;
 }
 
@@ -21,36 +22,42 @@
 .delivery-plans-hero {
   overflow: hidden;
   background:
-    radial-gradient(circle at 80% 40%, rgba(217, 164, 65, 0.13), transparent 30%),
-    linear-gradient(135deg, #f8fafc, #edf3f9);
+    radial-gradient(circle at 82% 45%, rgba(29, 71, 120, 0.1), transparent 28%),
+    linear-gradient(135deg, #f8fafc 0%, #edf3f9 100%);
 }
 
 .delivery-plans-hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: 55px;
-  min-height: 530px;
-  padding-block: 70px;
+  gap: 48px;
+  min-height: 550px;
+  padding-block: 66px;
 }
 
-.delivery-plans-eyebrow {
+.delivery-plans-hero-copy {
+  min-width: 0;
+}
+
+.delivery-plans-eyebrow,
+.delivery-plans-section-label {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: #987021;
+  gap: 9px;
+  color: var(--plans-blue);
   font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   line-height: 1.6;
 }
 
 .delivery-plans-hero h1 {
-  margin: 22px 0;
-  font-size: clamp(2.65rem, 5vw, 4.1rem);
-  font-weight: 800;
+  max-width: 650px;
+  margin: 20px 0;
+  font-size: clamp(2.5rem, 4.7vw, 4.15rem);
+  font-weight: 850;
   letter-spacing: -2.5px;
-  line-height: 1.08;
+  line-height: 1.1;
 }
 
 .delivery-plans-hero h1 span {
@@ -58,8 +65,8 @@
   color: var(--plans-blue);
 }
 
-.delivery-plans-hero-grid > div:first-child > p {
-  max-width: 525px;
+.delivery-plans-hero-copy > p {
+  max-width: 540px;
   margin: 0;
   color: var(--plans-muted);
   font-size: 1rem;
@@ -70,8 +77,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 23px;
-  margin-top: 29px;
+  gap: 22px;
+  margin-top: 28px;
 }
 
 .delivery-plans-btn {
@@ -81,18 +88,14 @@
   justify-content: center;
   gap: 10px;
   padding: 0 21px;
-  border: 0;
+  border: 1px solid var(--plans-navy);
   border-radius: 7px;
   color: #fff;
   background: var(--plans-navy);
-  font: inherit;
   font-size: 0.9rem;
   font-weight: 750;
   text-decoration: none;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .delivery-plans-btn:hover {
@@ -108,80 +111,81 @@
 }
 
 .delivery-plans-contact-link:hover {
-  color: #987021;
+  color: var(--plans-blue);
 }
 
 .delivery-plans-hero-note {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 9px;
-  margin-top: 27px;
+  margin-top: 26px;
   color: #52647b;
   font-size: 0.82rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .delivery-plans-hero-note svg {
   flex-shrink: 0;
-  color: #27815d;
+  color: #247a58;
 }
 
 .delivery-plans-hero-visual {
   position: relative;
   display: grid;
-  min-height: 405px;
+  min-width: 0;
+  min-height: 420px;
   place-items: center;
 }
 
 .delivery-plans-visual-ring {
   position: absolute;
-  border: 1px solid rgba(29, 71, 120, 0.14);
+  border: 1px solid rgba(29, 71, 120, 0.16);
   border-radius: 50%;
 }
 
-.ring-one {
-  width: 370px;
-  height: 370px;
+.delivery-plans-visual-ring.ring-one {
+  width: min(360px, 90%);
+  aspect-ratio: 1;
 }
 
-.ring-two {
-  width: 275px;
-  height: 275px;
+.delivery-plans-visual-ring.ring-two {
+  width: min(270px, 68%);
+  aspect-ratio: 1;
 }
 
 .delivery-plans-visual-card {
   position: relative;
   z-index: 1;
-  width: min(360px, 85%);
-  padding: 31px;
-  border: 1px solid #fff;
+  width: min(355px, 82%);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 17px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 24px 60px rgba(24, 47, 77, 0.13);
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(16, 39, 68, 0.14);
 }
 
 .delivery-plans-visual-icon {
   display: grid;
-  width: 72px;
-  height: 72px;
+  width: 65px;
+  height: 65px;
   place-items: center;
-  margin-bottom: 24px;
-  border-radius: 14px;
+  margin-bottom: 23px;
+  border-radius: 13px;
   color: #fff;
   background: var(--plans-navy);
 }
 
 .delivery-plans-visual-card > span {
-  color: #987021;
+  color: var(--plans-blue);
   font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 1.2px;
+  font-weight: 850;
+  letter-spacing: 1px;
 }
 
 .delivery-plans-visual-card h2 {
-  margin: 12px 0;
-  font-size: 1.75rem;
-  letter-spacing: -0.7px;
+  margin: 11px 0;
+  font-size: 1.65rem;
+  letter-spacing: -0.8px;
   line-height: 1.25;
 }
 
@@ -196,36 +200,73 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 20px;
+  padding-top: 17px;
   border-top: 1px solid var(--plans-border);
   color: var(--plans-blue);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 750;
+}
+
+.delivery-plans-floating-card {
+  position: absolute;
+  right: 0;
+  bottom: 35px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  max-width: 245px;
+  padding: 14px 16px;
+  border: 1px solid var(--plans-border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(16, 39, 68, 0.1);
+}
+
+.delivery-plans-floating-card > svg {
+  flex-shrink: 0;
+  color: var(--plans-blue);
+}
+
+.delivery-plans-floating-card span,
+.delivery-plans-floating-card small {
+  display: block;
+}
+
+.delivery-plans-floating-card strong {
+  font-size: 0.8rem;
+}
+
+.delivery-plans-floating-card small {
+  margin-top: 3px;
+  color: var(--plans-muted);
+  font-size: 0.69rem;
+  line-height: 1.5;
 }
 
 .delivery-plans-options {
-  padding-block: 85px;
+  padding-block: 82px;
 }
 
 .delivery-plans-heading {
-  max-width: 690px;
+  max-width: 710px;
   margin: 0 auto 42px;
   text-align: center;
 }
 
 .delivery-plans-heading h2 {
-  margin: 14px 0;
-  font-size: clamp(2rem, 3.6vw, 2.7rem);
-  font-weight: 800;
-  letter-spacing: -1.3px;
+  margin: 13px 0;
+  font-size: clamp(1.9rem, 3.4vw, 2.65rem);
+  font-weight: 850;
+  letter-spacing: -1.2px;
   line-height: 1.2;
 }
 
 .delivery-plans-heading > p {
   margin: 0;
   color: var(--plans-muted);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   line-height: 1.8;
 }
 
@@ -239,25 +280,23 @@
 .delivery-plan-card {
   position: relative;
   display: flex;
+  min-width: 0;
   flex-direction: column;
-  padding: 30px 26px 25px;
+  padding: 28px 25px 24px;
   border: 1px solid var(--plans-border);
   border-radius: 13px;
   background: #fff;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .delivery-plan-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(16, 39, 68, 0.07);
+  box-shadow: 0 17px 38px rgba(16, 39, 68, 0.08);
 }
 
 .delivery-plan-featured {
-  border-color: #d6b46f;
-  box-shadow: 0 12px 32px rgba(16, 39, 68, 0.07);
+  border-color: #9db2ca;
+  box-shadow: 0 12px 35px rgba(16, 39, 68, 0.07);
 }
 
 .delivery-plan-selected {
@@ -267,14 +306,14 @@
 
 .delivery-plan-popular {
   align-self: flex-start;
-  margin: -5px 0 20px;
+  margin: -3px 0 17px;
   padding: 7px 9px;
   border-radius: 4px;
-  color: #805b18;
-  background: #fbf3e3;
+  color: var(--plans-blue);
+  background: #edf3fa;
   font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.7px;
+  font-weight: 850;
+  letter-spacing: 0.6px;
 }
 
 .delivery-plan-icon {
@@ -283,64 +322,67 @@
   height: 54px;
   place-items: center;
   margin-bottom: 19px;
-  border-radius: 10px;
+  border-radius: 11px;
   color: var(--plans-blue);
   background: #edf3fa;
 }
 
 .delivery-plan-label {
   color: var(--plans-muted);
-  font-size: 0.77rem;
-  font-weight: 650;
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
 .delivery-plan-card h3 {
-  margin: 7px 0 12px;
-  font-size: 1.5rem;
+  margin: 8px 0 11px;
+  font-size: 1.42rem;
   letter-spacing: -0.5px;
 }
 
 .delivery-plan-description {
-  min-height: 76px;
+  min-height: 75px;
   margin: 0;
   color: var(--plans-muted);
-  font-size: 0.88rem;
+  font-size: 0.87rem;
   line-height: 1.75;
 }
 
 .delivery-plan-divider {
   height: 1px;
-  margin: 23px 0;
+  margin: 22px 0;
   background: var(--plans-border);
 }
 
-.delivery-plan-card ul {
+.delivery-plan-card ul,
+.delivery-requirements {
   display: grid;
-  gap: 15px;
-  margin: 0 0 28px;
+  gap: 13px;
+  margin: 0 0 25px;
   padding: 0;
   list-style: none;
 }
 
-.delivery-plan-card li {
+.delivery-plan-card li,
+.delivery-requirements li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   color: #52647b;
-  font-size: 0.83rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
-.delivery-plan-card li svg {
+.delivery-plan-card li svg,
+.delivery-requirements li svg {
   flex-shrink: 0;
-  margin-top: 1px;
-  color: #27815d;
+  margin-top: 2px;
+  color: #247a58;
 }
 
 .delivery-plan-button {
   display: flex;
   width: 100%;
-  min-height: 48px;
+  min-height: 47px;
   align-items: center;
   justify-content: center;
   gap: 9px;
@@ -351,12 +393,10 @@
   color: var(--plans-navy);
   background: #fff;
   font: inherit;
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   font-weight: 750;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .delivery-plan-button:hover,
@@ -364,6 +404,15 @@
   border-color: var(--plans-navy);
   color: #fff;
   background: var(--plans-navy);
+}
+
+.delivery-plans-disclaimer {
+  max-width: 780px;
+  margin: 30px auto 0;
+  color: var(--plans-muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .delivery-plans-requirements {
@@ -382,21 +431,27 @@
   border: 1px solid var(--plans-border);
   border-radius: 12px;
   background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.delivery-requirement-card > div {
+.delivery-requirement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 39, 68, 0.06);
+}
+
+.delivery-requirement-icon {
   display: grid;
   width: 51px;
   height: 51px;
   place-items: center;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
   border-radius: 10px;
   color: var(--plans-blue);
   background: #edf3fa;
 }
 
 .delivery-requirement-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 9px;
   font-size: 1.05rem;
 }
 
@@ -404,77 +459,120 @@
   margin: 0;
   color: var(--plans-muted);
   font-size: 0.86rem;
-  line-height: 1.75;
-}
-
-.delivery-plans-selector {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: center;
-  gap: 55px;
-  margin-block: 75px;
-  padding: 40px;
-  border: 1px solid var(--plans-border);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(16, 39, 68, 0.04);
-}
-
-.delivery-plans-selector-copy h2 {
-  margin: 13px 0;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
-
-.delivery-plans-selector-copy > p {
-  margin: 0;
-  color: var(--plans-muted);
-  font-size: 0.92rem;
   line-height: 1.8;
 }
 
-.delivery-plans-selector-copy strong {
-  color: var(--plans-navy);
+.delivery-plan-enquiry-section {
+  padding-block: 80px;
+  background: #fff;
 }
 
-.delivery-plans-selector form {
+.delivery-plan-enquiry {
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 0.75fr);
+  align-items: center;
+  gap: 60px;
 }
 
-.delivery-plans-selector label {
-  color: var(--plans-navy);
-  font-size: 0.83rem;
+.delivery-plan-enquiry-copy h2 {
+  max-width: 530px;
+  margin: 15px 0;
+  font-size: clamp(1.9rem, 3.3vw, 2.55rem);
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+
+.delivery-plan-enquiry-copy > p {
+  max-width: 550px;
+  color: var(--plans-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.delivery-requirements {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.delivery-plan-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 28px;
+  border: 1px solid var(--plans-border);
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.delivery-plan-form-step {
+  color: var(--plans-blue);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.delivery-plan-selection label {
+  font-size: 0.87rem;
   font-weight: 750;
 }
 
-.delivery-plans-selector select {
+.delivery-plan-selection select {
   width: 100%;
   min-height: 49px;
   padding: 0 13px;
-  border: 1px solid #ccd7e5;
+  border: 1px solid #cdd8e6;
   border-radius: 7px;
-  outline: none;
   color: var(--plans-navy);
   background: #fff;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
-.delivery-plans-selector select:focus {
-  border-color: var(--plans-blue);
-  box-shadow: 0 0 0 3px rgba(29, 71, 120, 0.1);
+.delivery-plan-selection select:focus-visible,
+.delivery-plan-selection button:focus-visible,
+.delivery-plan-button:focus-visible,
+.delivery-plans-btn:focus-visible,
+.delivery-plans-contact-link:focus-visible {
+  outline: 3px solid #86a9d1;
+  outline-offset: 3px;
 }
 
-.delivery-plans-selector form .delivery-plans-btn {
-  width: 100%;
-  margin-top: 5px;
+.delivery-plan-selection button {
+  display: flex;
+  min-height: 49px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: var(--plans-navy);
+  font: inherit;
+  font-size: 0.87rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-@media (max-width: 1000px) {
+.delivery-plan-selection button:hover {
+  background: var(--plans-blue);
+}
+
+.delivery-plan-selection > p {
+  margin: 0;
+  color: var(--plans-muted);
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
   .delivery-plans-hero-grid {
-    gap: 25px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 24px;
+  }
+
+  .delivery-plans-floating-card {
+    right: -4px;
   }
 
   .delivery-plans-grid {
@@ -482,55 +580,69 @@
   }
 
   .delivery-plan-card {
-    padding-inline: 20px;
+    padding: 24px 19px 20px;
   }
 
-  .delivery-plans-selector {
-    gap: 30px;
+  .delivery-plan-enquiry {
+    gap: 32px;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .delivery-plans-container {
-    width: calc(100% - 36px);
+    width: min(100% - 36px, 560px);
   }
 
   .delivery-plans-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding-block: 55px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding-block: 55px 38px;
   }
 
   .delivery-plans-hero h1 {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
-    letter-spacing: -1.7px;
+    margin: 17px 0;
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+    letter-spacing: -1.5px;
   }
 
-  .delivery-plans-hero-grid > div:first-child > p {
-    font-size: 0.94rem;
+  .delivery-plans-hero-copy > p {
+    font-size: 0.93rem;
+  }
+
+  .delivery-plans-hero-actions {
+    gap: 17px;
+    margin-top: 23px;
   }
 
   .delivery-plans-hero-visual {
-    min-height: 380px;
-  }
-
-  .ring-one {
-    width: 320px;
-    height: 320px;
-  }
-
-  .ring-two {
-    width: 245px;
-    height: 245px;
+    min-height: 340px;
+    margin-top: 5px;
   }
 
   .delivery-plans-visual-card {
-    width: min(335px, 85%);
+    width: min(330px, 84%);
     padding: 25px;
   }
 
-  .delivery-plans-options {
-    padding-block: 60px;
+  .delivery-plans-visual-ring.ring-one {
+    width: min(300px, 88%);
+  }
+
+  .delivery-plans-visual-ring.ring-two {
+    width: min(225px, 66%);
+  }
+
+  .delivery-plans-floating-card {
+    right: 0;
+    bottom: 8px;
+    max-width: 220px;
+    padding: 11px 12px;
+  }
+
+  .delivery-plans-options,
+  .delivery-plans-requirements,
+  .delivery-plan-enquiry-section {
+    padding-block: 58px;
   }
 
   .delivery-plans-heading {
@@ -542,50 +654,75 @@
     letter-spacing: -0.8px;
   }
 
-  .delivery-plans-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .delivery-plans-grid,
+  .delivery-plans-requirements-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .delivery-plan-card {
+    padding: 25px;
   }
 
   .delivery-plan-description {
     min-height: 0;
   }
 
-  .delivery-plans-requirements {
-    padding-block: 60px;
+  .delivery-plan-card ul {
+    margin-bottom: 24px;
   }
 
-  .delivery-plans-requirements-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .delivery-requirement-card {
+    padding: 23px;
   }
 
-  .delivery-plans-selector {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-block: 50px;
-    padding: 26px 21px;
+  .delivery-plan-enquiry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .delivery-plan-enquiry-copy h2 {
+    font-size: 2rem;
+  }
+
+  .delivery-plan-selection {
+    padding: 23px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 380px) {
+  .delivery-plans-container {
+    width: calc(100% - 28px);
+  }
+
+  .delivery-plans-hero h1 {
+    font-size: 2.15rem;
+  }
+
   .delivery-plans-hero-actions {
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
   }
 
   .delivery-plans-btn {
-    max-width: 100%;
-    padding-inline: 15px;
-    font-size: 0.83rem;
+    width: 100%;
   }
 
-  .delivery-plans-hero-note {
-    align-items: flex-start;
+  .delivery-plans-visual-card {
+    padding: 21px;
   }
 
-  .delivery-plans-visual-card h2 {
-    font-size: 1.5rem;
+  .delivery-plans-floating-card {
+    max-width: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delivery-plans-page *,
+  .delivery-plans-page *::before,
+  .delivery-plans-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
